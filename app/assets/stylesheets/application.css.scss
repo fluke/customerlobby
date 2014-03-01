@@ -33,6 +33,16 @@ $breadcrumb-bg: #fff;
 
 @import "bootstrap";
 
+.modal {
+	.modal-header {
+		background: $nav-color;
+		color: #fff!important;
+		span {
+			color: #fff!important;
+		}
+	}
+}
+
 .wrapper {
     position: absolute;
     width: 100%;
@@ -64,6 +74,9 @@ $breadcrumb-bg: #fff;
 	background: $details-color;
 	height: 100%;
 	border-right: 1px solid $bread-border-color;
+	.btn-group {
+		width: 100%;
+	}
 }
 
 #activity {

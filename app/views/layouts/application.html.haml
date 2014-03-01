@@ -1,8 +1,5 @@
 -# app/views/layouts/application.html.haml
-
--# Jam in a flash[:notice] so that we can see the flash rendering in effect
-- flash[:notice] = "This is a test"
-!!!
+!!! 5
 %html
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
@@ -34,7 +31,9 @@
               %li
                 %a{href: "#"} Action
     #main{:role => "main", :class => "wrapper"}
-      #nav.col-sm-1
+      -# app/views/layouts/modal.html.haml
+      = render 'layouts/modal'
+      #nav.col-xs-1
         %ul.nav
           %li
             .result
@@ -60,8 +59,8 @@
             .settings
             %br
             SETTINGS
-      #content.col-sm-11
-        #bread.col-sm-12
+      #content.col-xs-11
+        #bread.col-xs-12
           %ol.breadcrumb
             %li
               Acme Enterprise
@@ -70,56 +69,63 @@
             %li.active
               %a{href: "#"} Contact Details
 
-        #details.col-sm-6 
+        #details.col-xs-6 
           .row
-            .col-sm-11.col-sm-offset-1
-              .col-sm-12 CONTACT DETAILS
-              .col-sm-6
+            .col-xs-11.col-xs-offset-1
+              .col-xs-12 CONTACT DETAILS
+              .col-xs-6
                 %h5.detail-header First Name
                 Kartik
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Last Name
                 Singh
-              .col-sm-12
+              .col-xs-12
                 %h5.detail-header Email
                 kartikluke@gmail.com
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Phone Number
                 (888) 555-6677-8899
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Mobile Number
                 (999) 222-3344-5566
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Address 1
                 333 Battery Street
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Address 2
                 333 Battery Street
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header City
                 San Francisco
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header State
                 California
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Zip
                 576104
-              .col-sm-6
+              .col-xs-6
                 %h5.detail-header Country
                 USA
-              .col-sm-12
+              .col-xs-12
                 %h5.detail-header Contact Preferences
-
+                .btn-group.clearfix
+                  %button.btn.btn-default.col-xs-3{type: "button"} 
+                    SMS
+                  %button.btn.btn-default.col-xs-3{type: "button"} 
+                    Email
+                  %button.btn.btn-default.col-xs-3{type: "button"} 
+                    Direct Mail
+              .clearfix
               %br
               %br
               %br
 
               %button.btn.btn-success UPDATE CONTACT
 
-        #activity.col-sm-6 
+        #activity.col-xs-6 
           .row
-            .col-sm-10.col-sm-offset-1
-              .col-sm-12 
+            .col-xs-10.col-xs-offset-1
+              .col-xs-12 
                 ACTIVITY
                 %ul.nav.navbar-right.navbar-nav
                   %li Show
@@ -128,29 +134,29 @@
             .clearfix
             %ul.nav.activities
               %li.clearfix
-                .col-sm-10.col-sm-offset-1
-                  .col-sm-1
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
                     .c-email
-                  .info.col-sm-11
-                    .col-sm-12
-                      .col-sm-6.text-left Email
-                      .col-sm-6.text-right Tue 01-03-2014
-                      .col-sm-12 Wrote an email
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left Email
+                      .col-xs-6.text-right Tue 01-03-2014
+                      .col-xs-12 Wrote an email
               %li.clearfix
-                .col-sm-10.col-sm-offset-1
-                  .col-sm-1
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
                     .c-email
-                  .info.col-sm-11
-                    .col-sm-12
-                      .col-sm-6.text-left Purchase
-                      .col-sm-6.text-right Tue 01-03-2014
-                      .col-sm-12 Made a purchase
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left Purchase
+                      .col-xs-6.text-right Tue 01-03-2014
+                      .col-xs-12 Made a purchase
               %li.clearfix
-                .col-sm-10.col-sm-offset-1
-                  .col-sm-1
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
                     .c-review
-                  .info.col-sm-11
-                    .col-sm-12
-                      .col-sm-6.text-left Review
-                      .col-sm-6.text-right Tue 01-03-2014
-                      .col-sm-12 Got a review
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left Review
+                      .col-xs-6.text-right Tue 01-03-2014
+                      .col-xs-12 Got a review

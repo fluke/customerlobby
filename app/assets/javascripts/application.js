@@ -17,3 +17,6 @@
 //= require bootstrap
 //= require_tree .
 
+jQuery(document).ready(function($) {
+	$('#update-contact').modal('show')
+});
