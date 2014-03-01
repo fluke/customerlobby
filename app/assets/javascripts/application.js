@@ -18,5 +18,21 @@
 //= require_tree .
 
 jQuery(document).ready(function($) {
-	$('#update-contact').modal('show')
+	$('#update-contact').modal('show');
+	$('.open-the-modal').click(function(event) {
+		$('#update-contact').modal('show');
+	});
+
+	var resize = function() {
+		$('#details, #activity').css("height", $('.wrapper').height()-$('#bread').height())
+		$('#nav').css("height", $('.wrapper').height())
+	}
+
+	resize();
+
+	$('#modal-form').submit(function(event) {
+		$('#update-contact').modal('hide');
+		return false;
+	});
+
 });

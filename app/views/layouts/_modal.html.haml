@@ -1,9 +1,68 @@
 #update-contact.modal.fade
-  .modal-dialog
+  .modal-dialog.modal-lg
     .modal-content
       .modal-header
         %button.close{type: "button", data: {dismiss: "modal"}, aria: {hidden: "true"}}
           %span.glyphicon.glyphicon-remove
         %h4.modal-title UPDATE CONTACT
-      .modal-body
-        %p One fine body&hellip;
+      .modal-body.clearfix
+        %form#modal-form.form-horizontal
+          .form-group
+            .col-xs-6
+              %label.control-label.col-xs-3 First Name
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+            .col-xs-6
+              %label.control-label.col-xs-3 Last Name
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+          %h5.col-xs-offset-2 
+            %span CONTACT
+          %hr
+          .form-group
+            .col-xs-12
+              %label.control-label.col-xs-1 Email
+              .col-xs-10.col-xs-offset-1
+                %input.form-control
+          .form-group
+            .col-xs-6
+              %label.control-label.col-xs-3 Phone
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+            .col-xs-6
+              %label.control-label.col-xs-3 Mobile
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+          %h5.col-xs-offset-2 
+            %span ADDRESS
+          %hr
+          .form-group
+            .col-xs-6
+              %label.control-label.col-xs-3 Address 1
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+            .col-xs-6
+              %label.control-label.col-xs-3 Address 2
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+          .form-group
+            .col-xs-6
+              %label.control-label.col-xs-3 City
+              .col-xs-8.col-xs-offset-1
+                %input.form-control
+            .col-xs-6
+              %label.control-label.col-xs-3 State
+              .col-xs-8.col-xs-offset-1
+                %select.form-control
+          .form-group
+            .col-xs-6
+              %label.control-label.col-xs-3 Zip
+              .col-xs-6.col-xs-offset-1
+                %input.form-control
+            .col-xs-6
+              %label.control-label.col-xs-3 Country
+              .col-xs-8.col-xs-offset-1
+                %select.form-control
+          .clearfix
+          %br
+          %button#save-button.btn.btn-success.col-xs-offset-2 SAVE

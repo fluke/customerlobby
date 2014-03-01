@@ -30,36 +30,37 @@
                 %a{href: "#"} Action
               %li
                 %a{href: "#"} Action
-    #main{:role => "main", :class => "wrapper"}
+    #main.wrapper.clearfix{:role => "main"}
       -# app/views/layouts/modal.html.haml
       = render 'layouts/modal'
       #nav.col-xs-1
         %ul.nav
-          %li
+          %li.active
             .result
             %br
-            RESULT
+            %p RESULT
           %li
             .customers
             %br
-            CUSTOMERS
+            %p CUSTOMERS
           %li
             .reviews
             %br
-            REVIEWS
+            %p REVIEWS
           %li
             .campaign
             %br
-            CAMPAIGNS
+            %p CAMPAIGNS
           %li
             .appoint
             %br
-            APPOINTMENTS
+            %p APPOINTMENTS
           %li
             .settings
             %br
-            SETTINGS
+            %p SETTINGS
       #content.col-xs-11
+
         #bread.col-xs-12
           %ol.breadcrumb
             %li
@@ -72,91 +73,165 @@
         #details.col-xs-6 
           .row
             .col-xs-11.col-xs-offset-1
-              .col-xs-12 CONTACT DETAILS
-              .col-xs-6
-                %h5.detail-header First Name
-                Kartik
-              .col-xs-6
-                %h5.detail-header Last Name
-                Singh
+              .col-xs-12 
+                %h4 CONTACT DETAILS
+              .form-group.clearfix
+                .col-xs-6
+                  %h5.text-muted First Name
+                  Kartik
+                .col-xs-6
+                  %h5.text-muted Last Name
+                  Singh
+              .form-group.clearfix
+                .col-xs-12
+                  %h5.text-muted Email
+                  kartikluke@gmail.com
+              .form-group.clearfix
+                .col-xs-6
+                  %h5.text-muted Phone Number
+                  (888) 555-6677-8899
+                .col-xs-6
+                  %h5.text-muted Mobile Number
+                  (999) 222-3344-5566
+              .form-group.clearfix
+                .col-xs-6
+                  %h5.text-muted Address 1
+                  333 Battery Street
+                .col-xs-6
+                  %h5.text-muted Address 2
+                  333 Battery Street
+              .form-group.clearfix
+                .col-xs-6
+                  %h5.text-muted City
+                  San Francisco
+                .col-xs-6
+                  %h5.text-muted State
+                  California
+              .form-group.clearfix
+                .col-xs-6
+                  %h5.text-muted Zip
+                  576104
+                .col-xs-6
+                  %h5.text-muted Country
+                  USA
               .col-xs-12
-                %h5.detail-header Email
-                kartikluke@gmail.com
-              .col-xs-6
-                %h5.detail-header Phone Number
-                (888) 555-6677-8899
-              .col-xs-6
-                %h5.detail-header Mobile Number
-                (999) 222-3344-5566
-              .col-xs-6
-                %h5.detail-header Address 1
-                333 Battery Street
-              .col-xs-6
-                %h5.detail-header Address 2
-                333 Battery Street
-              .col-xs-6
-                %h5.detail-header City
-                San Francisco
-              .col-xs-6
-                %h5.detail-header State
-                California
-              .col-xs-6
-                %h5.detail-header Zip
-                576104
-              .col-xs-6
-                %h5.detail-header Country
-                USA
-              .col-xs-12
-                %h5.detail-header Contact Preferences
+                %h5.text-muted Contact Preferences
                 .btn-group.clearfix
                   %button.btn.btn-default.col-xs-3{type: "button"} 
-                    SMS
+                    .pull-left 
+                      %span.glyphicon.glyphicon-send
+                      SMS
+                    .pull-right
+                      %span.glyphicon.glyphicon-remove
                   %button.btn.btn-default.col-xs-3{type: "button"} 
-                    Email
+                    .pull-left 
+                      %span.glyphicon.glyphicon-globe
+                      Email
+                    .pull-right
+                      %span.glyphicon.glyphicon-remove
                   %button.btn.btn-default.col-xs-3{type: "button"} 
-                    Direct Mail
+                    .pull-left 
+                      %span.glyphicon.glyphicon-envelope
+                      Direct Mail
+                    .pull-right
+                      %span.glyphicon.glyphicon-remove
               .clearfix
               %br
               %br
               %br
 
-              %button.btn.btn-success UPDATE CONTACT
+              %button.btn.btn-success.open-the-modal UPDATE CONTACT
 
         #activity.col-xs-6 
           .row
             .col-xs-10.col-xs-offset-1
               .col-xs-12 
-                ACTIVITY
-                %ul.nav.navbar-right.navbar-nav
-                  %li Show
+                %h4.pull-left ACTIVITY
+                %ul.nav.navbar-right.navbar-nav.show-select
+                  %li 
+                    %span Show&nbsp;
                   %li
-                    %select.form-control.pull-right
+                    %select.form-control.pull-right.input-sm
             .clearfix
             %ul.nav.activities
               %li.clearfix
                 .col-xs-10.col-xs-offset-1
                   .col-xs-1
-                    .c-email
+                    %span.c-email
                   .info.col-xs-11
                     .col-xs-12
-                      .col-xs-6.text-left Email
-                      .col-xs-6.text-right Tue 01-03-2014
+                      .col-xs-6.text-left.text-muted Email
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
                       .col-xs-12 Wrote an email
               %li.clearfix
                 .col-xs-10.col-xs-offset-1
                   .col-xs-1
-                    .c-email
+                    %span.c-purchase
                   .info.col-xs-11
                     .col-xs-12
-                      .col-xs-6.text-left Purchase
-                      .col-xs-6.text-right Tue 01-03-2014
+                      .col-xs-6.text-left.text-muted Purchase
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
                       .col-xs-12 Made a purchase
               %li.clearfix
                 .col-xs-10.col-xs-offset-1
                   .col-xs-1
-                    .c-review
+                    %span.c-review
                   .info.col-xs-11
                     .col-xs-12
-                      .col-xs-6.text-left Review
-                      .col-xs-6.text-right Tue 01-03-2014
+                      .col-xs-6.text-left.text-muted Review
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
+                      .col-xs-12 Got a review
+              %li.clearfix
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
+                    %span.c-email
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left.text-muted Email
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
+                      .col-xs-12 Wrote an email
+              %li.clearfix
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
+                    %span.c-purchase
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left.text-muted Purchase
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
+                      .col-xs-12 Made a purchase
+              %li.clearfix
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
+                    %span.c-review
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left.text-muted Review
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
+                      .col-xs-12 Got a review
+              %li.clearfix
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
+                    %span.c-email
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left.text-muted Email
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
+                      .col-xs-12 Wrote an email
+              %li.clearfix
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
+                    %span.c-purchase
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left.text-muted Purchase
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
+                      .col-xs-12 Made a purchase
+              %li.clearfix
+                .col-xs-10.col-xs-offset-1
+                  .col-xs-1
+                    %span.c-review
+                  .info.col-xs-11
+                    .col-xs-12
+                      .col-xs-6.text-left.text-muted Review
+                      .col-xs-6.text-right.text-muted Tue 01-03-2014
                       .col-xs-12 Got a review
