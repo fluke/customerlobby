@@ -1,0 +1,66 @@
+-# app/views/layouts/application.html.haml
+
+-# Jam in a flash[:notice] so that we can see the flash rendering in effect
+- flash[:notice] = "This is a test"
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    = stylesheet_link_tag :application, :media => "all"
+    = javascript_include_tag :application
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default.navbar-static-top{:role => "navigation"}
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{:type => "button", :data => {toggle: "collapse"}}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand
+            .logo.pull-left
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{href: "#"} HELP
+          %li.dropdown
+            %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}
+              .user.pull-left
+              John Doe 
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Action
+    #main{:role => "main", :class => "wrapper"}
+      #nav.col-sm-1
+        %ul.nav
+          %li
+            .result
+            %br
+            RESULT
+          %li
+            .customers
+            %br
+            CUSTOMERS
+          %li
+            .reviews
+            %br
+            REVIEWS
+          %li
+            .campaign
+            %br
+            CAMPAIGNS
+          %li
+            .appoint
+            %br
+            APPOINTMENTS
+          %li
+            .settings
+            %br
+            SETTINGS
+      #content.col-sm-11
+        #bread.col-sm-12 Bread
+        #details.col-sm-6 Details
+        #activity.col-sm-6 Activity

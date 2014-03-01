@@ -6,6 +6,11 @@ gem 'rails', '4.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Use HAML instead of ERB
+gem 'haml'
+gem 'haml-rails'
+gem 'haml-contrib'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.1'

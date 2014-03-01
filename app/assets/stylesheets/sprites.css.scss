@@ -1,0 +1,83 @@
+.c-email, .c-mail, .c-purchase, .c-review, .c-review-red, .appoint, .campaign, .customers, .result, .reviews, .settings, .user, .logo{
+	background: image-url('sprites.png') no-repeat;
+	display: inline-block;
+}
+
+.c-email{
+	background-position: 0 -136px ;
+	width: 32px;
+	height: 32px;
+}
+
+.c-mail{
+	background-position: 0 -103px ;
+	width: 32px;
+	height: 32px;
+}
+
+.c-purchase{
+	background-position: 0 -69px ;
+	width: 32px;
+	height: 32px;
+}
+
+.c-review{
+	background-position: 0 -34px ;
+	width: 32px;
+	height: 32px;
+}
+
+.c-review-red{
+	background-position: 0 0;
+	width: 32px;
+	height: 32px;
+}
+
+.appoint{
+	background-position: -34px -158px ;
+	width: 32px;
+	height: 30px;
+}
+
+.campaign{
+	background-position: -34px -127px ;
+	width: 32px;
+	height: 30px;
+}
+
+.customers{
+	background-position: -34px -95px ;
+	width: 32px;
+	height: 30px;
+}
+
+.result{
+	background-position: -34px -63px ;
+	width: 32px;
+	height: 30px;
+}
+
+.reviews{
+	background-position: -34px -31px ;
+	width: 32px;
+	height: 30px;
+}
+
+.settings{
+	background-position: -34px 0;
+	width: 32px;
+	height: 30px;
+}
+
+.user{
+	background-position: -68px -1px ;
+	width: 22px;
+	height: 25px;
+}
+
+.logo{
+	background-position: -92px 0;
+	width: 127px;
+	height: 25px;
+}
+
