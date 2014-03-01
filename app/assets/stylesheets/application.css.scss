@@ -12,17 +12,24 @@
  *= require_tree .
  */
 
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+$font-family-base: "Lato" "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 // Colors
 $nav-color: #3f474d;
 $nav-color-highlight: #e69422;
 $details-color: #edf0f2;
 $bread-border-color: #bfbfbf;
-$activity-top: #fafafa;
+$activity-color: #fafafa;
 
 $grid-gutter-width: 0;
 
 $navbar-default-bg: #2b3033;
 $navbar-margin-bottom: 0px;
+
+$breadcrumb-separator: ">";
+$breadcrumb-bg: #fff;
 
 @import "bootstrap";
 
@@ -48,10 +55,28 @@ $navbar-margin-bottom: 0px;
 
 #bread {
 	border-bottom: 1px solid $bread-border-color;
+	ol {
+		margin-bottom: 0;
+	}
 }
 
 #details {
 	background: $details-color;
 	height: 100%;
 	border-right: 1px solid $bread-border-color;
+}
+
+#activity {
+	background: $activity-color;
+	height: 100%;
+	ul.activities {
+		li {
+			background: #fff;
+			border-top: 1px solid lighten($bread-border-color,10%);
+		}
+	}
+}
+
+#details, #activity {
+	padding-top: 40px;
 }

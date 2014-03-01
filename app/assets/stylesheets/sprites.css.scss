@@ -1,6 +1,7 @@
 .c-email, .c-mail, .c-purchase, .c-review, .c-review-red, .appoint, .campaign, .customers, .result, .reviews, .settings, .user, .logo{
 	background: image-url('sprites.png') no-repeat;
 	display: inline-block;
+	vertical-align: middle;
 }
 
 .c-email{

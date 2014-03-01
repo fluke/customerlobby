@@ -61,6 +61,96 @@
             %br
             SETTINGS
       #content.col-sm-11
-        #bread.col-sm-12 Bread
-        #details.col-sm-6 Details
-        #activity.col-sm-6 Activity
+        #bread.col-sm-12
+          %ol.breadcrumb
+            %li
+              Acme Enterprise
+            %li
+              Contacts
+            %li.active
+              %a{href: "#"} Contact Details
+
+        #details.col-sm-6 
+          .row
+            .col-sm-11.col-sm-offset-1
+              .col-sm-12 CONTACT DETAILS
+              .col-sm-6
+                %h5.detail-header First Name
+                Kartik
+              .col-sm-6
+                %h5.detail-header Last Name
+                Singh
+              .col-sm-12
+                %h5.detail-header Email
+                kartikluke@gmail.com
+              .col-sm-6
+                %h5.detail-header Phone Number
+                (888) 555-6677-8899
+              .col-sm-6
+                %h5.detail-header Mobile Number
+                (999) 222-3344-5566
+              .col-sm-6
+                %h5.detail-header Address 1
+                333 Battery Street
+              .col-sm-6
+                %h5.detail-header Address 2
+                333 Battery Street
+              .col-sm-6
+                %h5.detail-header City
+                San Francisco
+              .col-sm-6
+                %h5.detail-header State
+                California
+              .col-sm-6
+                %h5.detail-header Zip
+                576104
+              .col-sm-6
+                %h5.detail-header Country
+                USA
+              .col-sm-12
+                %h5.detail-header Contact Preferences
+
+              %br
+              %br
+              %br
+
+              %button.btn.btn-success UPDATE CONTACT
+
+        #activity.col-sm-6 
+          .row
+            .col-sm-10.col-sm-offset-1
+              .col-sm-12 
+                ACTIVITY
+                %ul.nav.navbar-right.navbar-nav
+                  %li Show
+                  %li
+                    %select.form-control.pull-right
+            .clearfix
+            %ul.nav.activities
+              %li.clearfix
+                .col-sm-10.col-sm-offset-1
+                  .col-sm-1
+                    .c-email
+                  .info.col-sm-11
+                    .col-sm-12
+                      .col-sm-6.text-left Email
+                      .col-sm-6.text-right Tue 01-03-2014
+                      .col-sm-12 Wrote an email
+              %li.clearfix
+                .col-sm-10.col-sm-offset-1
+                  .col-sm-1
+                    .c-email
+                  .info.col-sm-11
+                    .col-sm-12
+                      .col-sm-6.text-left Purchase
+                      .col-sm-6.text-right Tue 01-03-2014
+                      .col-sm-12 Made a purchase
+              %li.clearfix
+                .col-sm-10.col-sm-offset-1
+                  .col-sm-1
+                    .c-review
+                  .info.col-sm-11
+                    .col-sm-12
+                      .col-sm-6.text-left Review
+                      .col-sm-6.text-right Tue 01-03-2014
+                      .col-sm-12 Got a review
