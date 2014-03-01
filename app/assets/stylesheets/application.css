@@ -11,3 +11,5 @@
  *= require_self
  *= require_tree .
  */
+$grid-gutter-width: 0;
+@import "bootstrap";
